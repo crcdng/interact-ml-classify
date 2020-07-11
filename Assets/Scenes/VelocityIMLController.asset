@@ -75,7 +75,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   id: f42fc912-49a2-4e4b-a1eb-4daf22523fed
   graph: {fileID: 11400000}
-  position: {x: -696, y: -360}
+  position: {x: -728, y: -360}
   ports:
     keys:
     - GameObjectDataOut
@@ -96,7 +96,7 @@ MonoBehaviour:
   GameObjectDataOut: {fileID: 0}
   GameObjMissing: 0
   state: 0
-  GOHashCode: -5018
+  GOHashCode: 13682
   CreatedDuringPlaymode: 0
 --- !u!114 &-6843207276030303277
 MonoBehaviour:
@@ -142,11 +142,11 @@ MonoBehaviour:
   DevMode: 0
   ValueName: 
   m_In: 0
-  m_Value: 0
+  m_Value: 1
   m_Out: 0
   ReceivingData: 0
   InputConnected: 0
-  m_UserInput: 0
+  m_UserInput: 1
   int_switch: 1
 --- !u!114 &-5875760682263575363
 MonoBehaviour:
@@ -211,8 +211,9 @@ MonoBehaviour:
   - {fileID: -8857807872885634672}
   PredictedRapidlibOutput:
   - 0
-  DelayedPredictedOutput: []
-  m_NumExamplesTrainedOn: 0
+  DelayedPredictedOutput:
+  - 0
+  m_NumExamplesTrainedOn: 376
   m_ExpectedInputList: 05000000
   m_ExpectedOutputList: 01000000
   m_LearningType: 0
