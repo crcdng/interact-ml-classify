@@ -9,17 +9,21 @@ public class AlertVelocity : MonoBehaviour
     public Light light;
 
     [PullFromIMLController]
-    public int SetLightIntensity;
+    public int SetLightColor;
 
     // Start is called before the first frame update
     void Start()
     {
-        
+        light.color = Color.green;
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (light != null) print(SetLightIntensity);
+        if (SetLightColor == 1)
+        {
+            print(SetLightColor);
+            light.color = Color.red;
+        }
     }
 }

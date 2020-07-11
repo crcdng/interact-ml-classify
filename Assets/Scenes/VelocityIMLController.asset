@@ -55,7 +55,7 @@ MonoBehaviour:
     - 0
   m_LastFrameFeatureValue:
   - 0
-  - 0
+  - 0.53
   - 0
   ReceivingData: 0
   x_switch: 1
@@ -379,7 +379,7 @@ MonoBehaviour:
   m_PositionExtracted:
     m_Values:
     - 0
-    - 0
+    - 0.53
     - 0
   ReceivingData: 0
 --- !u!114 &2489453593380145458
@@ -400,6 +400,7 @@ MonoBehaviour:
   ports:
     keys:
     - SetLightIntensity
+    - SetLightColor
     values:
     - _fieldName: SetLightIntensity
       _node: {fileID: 2489453593380145458}
@@ -413,19 +414,25 @@ MonoBehaviour:
       _connectionType: 0
       _typeConstraint: 0
       _dynamic: 1
+    - _fieldName: SetLightColor
+      _node: {fileID: 2489453593380145458}
+      _typeQualifiedName: System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral,
+        PublicKeyToken=b77a5c561934e089
+      connections: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 1
   DevMode: 0
   m_ScriptInternal: {fileID: 0}
   ScriptHashCode: -347922
   m_PortsPerFieldInfo:
     m_keys:
-    - _fieldName: SetLightIntensity
+    - _fieldName: SetLightColor
       _node: {fileID: 2489453593380145458}
       _typeQualifiedName: System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral,
         PublicKeyToken=b77a5c561934e089
-      connections:
-      - fieldName: Output 0
-        node: {fileID: -5875760682263575363}
-        reroutePoints: []
+      connections: []
       _direction: 0
       _connectionType: 0
       _typeConstraint: 0
