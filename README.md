@@ -14,7 +14,7 @@ In this repo I contribute an example that measures the velocity of a game object
 
 ### Classification Example 
 
-![Classification Graph](/Assets/Documentation/InteractMLGraph.png)
+![Classification Graph](/Assets/Docs/InteractMLGraph.png)
 
 #### To set up the system
 1. Install dependencies (Step 1)
