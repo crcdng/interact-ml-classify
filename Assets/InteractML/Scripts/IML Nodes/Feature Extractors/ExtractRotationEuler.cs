@@ -7,10 +7,10 @@ using XNode;
 namespace InteractML.FeatureExtractors
 {
     /// <summary>
-    /// Feature extractor for rotations
+    /// Feature extractor for euler rotations
     /// </summary>
     [NodeWidth(250)]
-    public class ExtractRotation : BaseExtractorNode, IFeatureIML
+    public class ExtractRotationEuler : BaseExtractorNode, IFeatureIML
     {
         /// <summary>
         /// GameObject from which we extract a feature
@@ -35,7 +35,6 @@ namespace InteractML.FeatureExtractors
         public bool x_switch = true;
         public bool y_switch = true;
         public bool z_switch = true;
-        public bool w_switch = true;
 
         /// <summary>
         /// Feature Values extracted (ready to be read by a different node)
@@ -46,7 +45,7 @@ namespace InteractML.FeatureExtractors
         /// The private feature values extracted in a more specific data type
         /// </summary>
         [SerializeField]
-        private IMLVector4 m_RotationExtracted;
+        private IMLVector3 m_RotationExtracted;
 
         [HideInInspector]
         public bool GameObjInputMissing;
@@ -68,7 +67,7 @@ namespace InteractML.FeatureExtractors
 
         public bool ReceivingData;
 
-        float x, y, z, w;
+        float x, y, z;
         int counter = 0;
         int count = 5;
 
@@ -79,10 +78,10 @@ namespace InteractML.FeatureExtractors
             tooltips = IMLTooltipsSerialization.LoadTooltip("Rotation");
             if (m_RotationExtracted == null)
             {
-                m_RotationExtracted = new IMLVector4();
+                m_RotationExtracted = new IMLVector3();
 
             }
-            
+
         }
 
         // Return the correct value of an output port when requested
@@ -121,14 +120,13 @@ namespace InteractML.FeatureExtractors
                 x = FeatureValues.Values[0];
                 y = FeatureValues.Values[1];
                 z = FeatureValues.Values[2];
-                w = FeatureValues.Values[3];
             }
 
             counter++;
 
             if (m_RotationExtracted == null)
             {
-                m_RotationExtracted = new IMLVector4();
+                m_RotationExtracted = new IMLVector3();
 
             }
 
@@ -146,10 +144,10 @@ namespace InteractML.FeatureExtractors
             else
             {
                 // Set values of our feature extracted
-                if(LocalSpace)
-                    m_RotationExtracted.SetValues(gameObjRef.transform.localRotation);
+                if (LocalSpace)
+                    m_RotationExtracted.SetValues(gameObjRef.transform.localEulerAngles);
                 else
-                    m_RotationExtracted.SetValues(gameObjRef.transform.rotation);
+                    m_RotationExtracted.SetValues(gameObjRef.transform.eulerAngles);
 
                 GameObjInputMissing = false;
             }
@@ -162,9 +160,6 @@ namespace InteractML.FeatureExtractors
 
             if (!z_switch)
                 FeatureValues.Values[2] = 0;
-
-            if (!w_switch)
-                FeatureValues.Values[3] = 0;
 
             return this;
 

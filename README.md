@@ -24,7 +24,7 @@ In this repo I share an example that measures the velocity of a game object and 
 #### To record training examples (InteractML Wiki Step 5):
 <pre>
 For each class to be detected:     
-    Set the label class (number) in `Live Int Data` node     
+    Set the label class (number) in the `Live Int Data` node     
     Start the game in Unity    
     For each example recoding:     
         Press SPACE to record    
@@ -35,7 +35,7 @@ For each class to be detected:
 
 #### To train the model (InteractML Wiki Step 6):
 1. If it is running, stop the game in Unity 
-2. Klick on `Training``
+2. Klick on `Training`
 3. Wait a bit 
 
 #### To run the model (InteractML Wiki Step 6):
@@ -43,4 +43,4 @@ For each class to be detected:
 2. Press "P" to run the model    
 
 ### Compatibility
-InteractML is in pre-release alpha and under heavy construction at the moment. See https://github.com/Interactml/iml-unity. The developers strongly recommend to use Unity 2019.2 with [release 0.20.2](https://github.com/Interactml/iml-unity/releases/tag/0.20.2). 
+InteractML is in pre-release alpha and under heavy construction at the moment. See https://github.com/Interactml/iml-unity. The developers strongly recommend to use Unity 2019.2 with [release 0.20.2](https://github.com/Interactml/iml-unity/releases/tag/0.20.2). For this repo, I am using this setup on a Mac.

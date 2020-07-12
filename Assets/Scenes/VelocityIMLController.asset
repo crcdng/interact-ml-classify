@@ -46,6 +46,7 @@ MonoBehaviour:
       _typeConstraint: 0
       _dynamic: 0
   DevMode: 0
+  IsInitialized: 1
   FeatureToInput: {fileID: 874993342906711119}
   VelocityExtracted: {fileID: 0}
   m_VelocityExtracted:
@@ -93,9 +94,10 @@ MonoBehaviour:
       _typeConstraint: 0
       _dynamic: 0
   DevMode: 0
+  IsInitialized: 1
   GameObjectDataOut: {fileID: 0}
   GameObjMissing: 0
-  state: 1
+  state: 0
   GOHashCode: 13708
   CreatedDuringPlaymode: 0
 --- !u!114 &-6843207276030303277
@@ -140,6 +142,7 @@ MonoBehaviour:
       _typeConstraint: 0
       _dynamic: 0
   DevMode: 0
+  IsInitialized: 1
   ValueName: 
   m_In: 0
   m_Value: 1
@@ -208,6 +211,7 @@ MonoBehaviour:
       _typeConstraint: 0
       _dynamic: 1
   DevMode: 0
+  IsInitialized: 1
   IMLTrainingExamplesNodes:
   - {fileID: 264970689103914118}
   InputFeatures:
@@ -216,7 +220,7 @@ MonoBehaviour:
   - 0
   DelayedPredictedOutput:
   - 0
-  m_NumExamplesTrainedOn: 376
+  m_NumExamplesTrainedOn: 0
   m_ExpectedInputList: 05000000
   m_ExpectedOutputList: 01000000
   m_LearningType: 0
@@ -310,6 +314,7 @@ MonoBehaviour:
       _typeConstraint: 0
       _dynamic: 0
   DevMode: 0
+  IsInitialized: 1
   InputFeatures:
   - {fileID: -8857807872885634672}
   TargetValues:
@@ -371,6 +376,7 @@ MonoBehaviour:
       _typeConstraint: 0
       _dynamic: 0
   DevMode: 0
+  IsInitialized: 1
   GameObjectDataIn: {fileID: 0}
   LiveDataOut: {fileID: 0}
   LocalSpace: 0
@@ -425,6 +431,7 @@ MonoBehaviour:
       _typeConstraint: 0
       _dynamic: 1
   DevMode: 0
+  IsInitialized: 1
   m_ScriptInternal: {fileID: 0}
   ScriptHashCode: 13732
   m_PortsPerFieldInfo:
@@ -487,6 +494,7 @@ MonoBehaviour:
       _typeConstraint: 0
       _dynamic: 0
   DevMode: 0
+  IsInitialized: 1
   ValueName: 
   m_In: 0
   m_Value: 0

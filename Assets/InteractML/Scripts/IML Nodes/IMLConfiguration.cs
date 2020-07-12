@@ -76,9 +76,9 @@ namespace InteractML
         /// <summary>
         /// Keyboard flag to control node
         /// </summary>
-        public bool EnableKeyboardControl;
+        public bool EnableKeyboardControl = true;
         [HideInInspector]
-        public KeyCode TrainingKey;
+        public KeyCode TrainingKey = KeyCode.T;
         [HideInInspector]
         public KeyCode RunningKey;
 
@@ -143,7 +143,7 @@ namespace InteractML
         /// Flag that controls if the iml model should run when the game awakes 
         /// </summary>
         [HideInInspector]
-        public bool RunOnAwake = false;
+        public bool RunOnAwake;
 
         /* NODEPORT NAMES */
         protected string m_TrainingExamplesNodeportName;
@@ -395,6 +395,10 @@ namespace InteractML
             {
                 ToggleRunning();
             }
+            if (Input.GetKeyDown(KeyCode.T))
+            {
+                TrainModel();
+            }
 
             //Check if live data input matches training examples 
             CheckLiveDataInputMatchesTrainingExamples();
@@ -549,9 +553,15 @@ namespace InteractML
         /// Loads the current model from disk (dataPath specified in IMLDataSerialization)
         /// </summary>
         /// <param name="fileName"></param>
-        public virtual void LoadModelFromDisk(bool reCreateModel = false)
+        public virtual bool LoadModelFromDisk(bool reCreateModel = false)
         {
-            m_Model.LoadModelFromDisk(this.graph.name + "_IMLConfiguration" + this.id, reCreateModel);
+            bool success = false;
+
+            // Make sure to re-instantiate the model if null or flag is true
+            if (m_Model == null || reCreateModel)
+                m_Model = InstantiateRapidlibModel(LearningType);
+
+            success = m_Model.LoadModelFromDisk(this.graph.name + "_IMLConfiguration" + this.id, reCreateModel);
             // We update the node learning type to match the one from the loaded model
             switch (m_Model.TypeOfModel)
             {
@@ -581,6 +591,8 @@ namespace InteractML
                 default:
                     break;
             }
+
+            return success;
         }
 
         #endregion

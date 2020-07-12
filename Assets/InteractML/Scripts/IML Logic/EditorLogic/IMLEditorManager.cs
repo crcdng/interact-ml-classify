@@ -80,9 +80,12 @@ public class IMLEditorManager
         {
             // Get all nodes
             MLComponent.GetAllNodes();
-            // Reload models
-            MLComponent.LoadAllModelsFromDisk(reCreateModels: true);
-            // Run them (if marked with RunOnAwake)
+
+            MLComponent.LoadDataAndRunOnAwakeModels();
+            //// Reload models
+            //MLComponent.LoadAllModelsFromDisk(reCreateModels: true);
+            //// Run them (if marked with RunOnAwake)
+            //MLComponent.RunAllModels();
         }
 
     }
@@ -101,10 +104,12 @@ public class IMLEditorManager
             // Reload all models (if we can) when we enter playmode or when we come back to the editor
             foreach (var MLComponent in m_IMLComponents)
             {
-                // Reload models
-                MLComponent.LoadAllModelsFromDisk(reCreateModels: true);
-                // Run them (if marked with RunOnAwake)
-                MLComponent.RunAllModels();
+                MLComponent.LoadDataAndRunOnAwakeModels();
+                
+                //// Reload models
+                //MLComponent.LoadAllModelsFromDisk(reCreateModels: true);
+                //// Run them (if marked with RunOnAwake)
+                //MLComponent.RunAllModels();
             }
             //Debug.Log("**Models reconfigured in editor status: " + playModeStatus + "**");
         }
@@ -218,6 +223,8 @@ public class IMLEditorManager
 
     }
 
+#if UNITY_EDITOR
+
     /// <summary>
     /// Creates an IML System GameObject in the scene
     /// </summary>
@@ -234,4 +241,7 @@ public class IMLEditorManager
         Undo.RegisterCreatedObjectUndo(imlSystem, "Create " + imlSystem.name);
         Selection.activeObject = imlSystem;
     }
+
+#endif
+
 }

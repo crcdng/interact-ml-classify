@@ -8,20 +8,20 @@ using XNodeEditor;
 
 namespace InteractML.FeatureExtractors
 {
-    [CustomNodeEditor(typeof(ExtractRotation))]
-    public class ExtractRotationNodeEditor : IMLNodeEditor
+    [CustomNodeEditor(typeof(ExtractRotationEuler))]
+    public class ExtractRotationEulerNodeEditor : IMLNodeEditor
     {
         /// <summary>
         /// Reference to the node itself
         /// </summary>
-        private ExtractRotation m_ExtractRotation;
+        private ExtractRotationEuler m_ExtractRotationEuler;
 
         public override void OnHeaderGUI()
         {
             // Get reference to the current node
-            m_ExtractRotation = (target as ExtractRotation);
-            nodeSpace = 170;
-            NodeName = "LIVE ROTATION DATA";
+            m_ExtractRotationEuler = (target as ExtractRotationEuler);
+            nodeSpace = 150;
+            NodeName = "LIVE EULER ANGLES DATA";
             base.OnHeaderGUI();
 
         }
@@ -33,14 +33,14 @@ namespace InteractML.FeatureExtractors
             OutputPortsNamesOverride = new Dictionary<string, string>();
             base.InputPortsNamesOverride.Add("GameObjectDataIn", "Game Object\nData In");
             base.OutputPortsNamesOverride.Add("LiveDataOut", "Rotation\nData Out");
-            base.nodeTips = m_ExtractRotation.tooltips;
-            m_BodyRect.height = 170;
+            base.nodeTips = m_ExtractRotationEuler.tooltips;
+            m_BodyRect.height = 150;
             base.OnBodyGUI();
         }
 
         protected override void ShowBodyFields()
         {
-            DataInToggle(m_ExtractRotation.ReceivingData, m_InnerBodyRect, m_BodyRect);
+            DataInToggle(m_ExtractRotationEuler.ReceivingData, m_InnerBodyRect, m_BodyRect);
         }
 
         /// <summary>
@@ -50,39 +50,31 @@ namespace InteractML.FeatureExtractors
         {
             GUILayout.BeginHorizontal();
             GUILayout.Space(bodySpace);
-            m_ExtractRotation.x_switch = EditorGUILayout.Toggle(m_ExtractRotation.x_switch, style);
-            EditorGUILayout.LabelField("x: " + System.Math.Round(m_ExtractRotation.FeatureValues.Values[0], 3).ToString(), m_NodeSkin.GetStyle("Node Body Label Axis"));
+            m_ExtractRotationEuler.x_switch = EditorGUILayout.Toggle(m_ExtractRotationEuler.x_switch, style);
+            EditorGUILayout.LabelField("x: " + System.Math.Round(m_ExtractRotationEuler.FeatureValues.Values[0], 3).ToString(), m_NodeSkin.GetStyle("Node Body Label Axis"));
             GUILayout.EndHorizontal();
 
             EditorGUILayout.Space();
 
             GUILayout.BeginHorizontal();
             GUILayout.Space(bodySpace);
-            m_ExtractRotation.y_switch = EditorGUILayout.Toggle(m_ExtractRotation.y_switch, style);
-            EditorGUILayout.LabelField("y: " + System.Math.Round(m_ExtractRotation.FeatureValues.Values[1], 3).ToString(), m_NodeSkin.GetStyle("Node Body Label Axis"));
+            m_ExtractRotationEuler.y_switch = EditorGUILayout.Toggle(m_ExtractRotationEuler.y_switch, style);
+            EditorGUILayout.LabelField("y: " + System.Math.Round(m_ExtractRotationEuler.FeatureValues.Values[1], 3).ToString(), m_NodeSkin.GetStyle("Node Body Label Axis"));
             GUILayout.EndHorizontal();
 
             EditorGUILayout.Space();
 
             GUILayout.BeginHorizontal();
             GUILayout.Space(bodySpace);
-            m_ExtractRotation.z_switch = EditorGUILayout.Toggle(m_ExtractRotation.z_switch, style);
-            EditorGUILayout.LabelField("z: " + System.Math.Round(m_ExtractRotation.FeatureValues.Values[2], 3).ToString(), m_NodeSkin.GetStyle("Node Body Label Axis"));
-            GUILayout.EndHorizontal();
-
-            EditorGUILayout.Space();
-
-            GUILayout.BeginHorizontal();
-            GUILayout.Space(bodySpace);
-            m_ExtractRotation.w_switch = EditorGUILayout.Toggle(m_ExtractRotation.w_switch, style);
-            EditorGUILayout.LabelField("w: " + System.Math.Round(m_ExtractRotation.FeatureValues.Values[3], 3).ToString(), m_NodeSkin.GetStyle("Node Body Label Axis"));
+            m_ExtractRotationEuler.z_switch = EditorGUILayout.Toggle(m_ExtractRotationEuler.z_switch, style);
+            EditorGUILayout.LabelField("z: " + System.Math.Round(m_ExtractRotationEuler.FeatureValues.Values[2], 3).ToString(), m_NodeSkin.GetStyle("Node Body Label Axis"));
             GUILayout.EndHorizontal();
 
             GUILayout.Space(20);
 
             GUILayout.BeginHorizontal();
             GUILayout.Space(bodySpace);
-            m_ExtractRotation.LocalSpace = EditorGUILayout.Toggle(m_ExtractRotation.LocalSpace, m_NodeSkin.GetStyle("Local Space Toggle"));
+            m_ExtractRotationEuler.LocalSpace = EditorGUILayout.Toggle(m_ExtractRotationEuler.LocalSpace, m_NodeSkin.GetStyle("Local Space Toggle"));
             EditorGUILayout.LabelField("Use local space for transform", m_NodeSkin.GetStyle("Node Local Space Label"));
             GUILayout.EndHorizontal();
         }
