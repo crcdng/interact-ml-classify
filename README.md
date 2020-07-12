@@ -6,9 +6,7 @@ There is even an online course "Machine Learning for Musicians and Artists" by t
 
 One of the strengths of Wekinator is that it can be connected to almost everything through OSC. For example, 2 years ago I wrote a helper for the [Bitalino revolution Biodata sensor](https://bitalino.com/en/) that connects [Bitalino to Wekinator via a Processing sketch](https://github.com/i3games/p5_bitalino_helper), among others. The system could learn patterns from heart rate or skin conductance measures and send it to, say, pure data or Max MSP. 
 
-Now surely some people would like to make interesting stuff like that, but in [Unity](https://unity.com/). Enter InteractML.
-
-InteractML comes with a [wiki](https://github.com/Interactml/iml-unity/wiki) that explains in detail the individual steps to get the system up and running. 
+Now surely some people would like to make interesting stuff like that, but in [Unity](https://unity.com/). Enter [InteractML](https://github.com/Interactml/iml-unity). InteractML is built on a C++ library called [RapidLib](https://github.com/mzed/ofxRapidLib).
 
 ### Classification  
 
@@ -16,10 +14,16 @@ In this repo I share an example that measures the velocity of a game object and 
 
 ![Classification Graph](/Assets/Docs/InteractMLGraph.png)
 
-#### To set up the system
-1. Install dependencies (Step 1)
-2. Build the classification pipeline (InteractML Wiki Step 1-5)
+InteractML comes with a [wiki](https://github.com/Interactml/iml-unity/wiki) that explains in detail the individual steps to get the system up and running and 
+
+#### To set up the system (InteractML Wiki Step 1-5)
+1. Install dependencies 
+2. Build the classification pipeline 
 3. Check if the data flows into the `Teach the Machine Node` as expected
+
+#### To connect the system with Game Objects (InteractML Wiki Step 7, optional: 8)
+1. Add Game Objects with Scripts to get the result of the classification
+2. Optional: Add Scripts to pipe data into the pipeline
 
 #### To record training examples (InteractML Wiki Step 5):
 <pre>
@@ -36,11 +40,11 @@ For each class to be detected:
 #### To train the model (InteractML Wiki Step 6):
 1. If it is running, stop the game in Unity 
 2. Klick on `Training`
-3. Wait a bit 
+3. Wait a bit until it comes back and indicates the model has been trained.
 
 #### To run the model (InteractML Wiki Step 6):
 1. Start the game in Unity    
-2. Press "P" to run the model    
+2. Press "P" to run the model. You can skip that step if you check `Run Model on Play` in the `Machine Learning System` node. 
 
 ### Compatibility
-InteractML is in pre-release alpha and under heavy construction at the moment. See https://github.com/Interactml/iml-unity. The developers strongly recommend to use Unity 2019.2 with [release 0.20.2](https://github.com/Interactml/iml-unity/releases/tag/0.20.2). For this repo, I am using this setup on a Mac.
+InteractML is in pre-release alpha, under heavy construction and not ready for production at the moment. It is for the curious who want to try out and experiment with interactive machine learning. The developers strongly recommend to use [release 0.20.4](https://github.com/Interactml/iml-unity/releases/tag/0.20.4) with **Unity 2019.2**. For this repo, I have used this setup on a Mac.
