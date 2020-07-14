@@ -17,15 +17,18 @@ In this repo I share an example that measures the velocity of a game object and 
 InteractML comes with a [wiki](https://github.com/Interactml/iml-unity/wiki) that explains in detail the individual steps to get the system up and running and 
 
 #### To set up the system (InteractML Wiki Step 1-5)
+
 1. Install dependencies 
 2. Build the classification pipeline 
 3. Check if the data flows into the `Teach the Machine Node` as expected
 
 #### To connect the system with Game Objects (InteractML Wiki Step 7, optional: 8)
+
 1. Add Game Objects with Scripts to get the result of the classification
 2. Optional: Add Scripts to pipe data into the pipeline
 
-#### To record training examples (InteractML Wiki Step 5):
+#### To record training examples (InteractML Wiki Step 5)
+
 <pre>
 For each class to be detected:     
     Set the label class (number) in the `Live Int Data` node     
@@ -37,14 +40,17 @@ For each class to be detected:
     Stop the game in Unity    
 </pre>
 
-#### To train the model (InteractML Wiki Step 6):
+#### To train the model (InteractML Wiki Step 6)
+
 1. If it is running, stop the game in Unity 
 2. Klick on `Training`
 3. Wait a bit until it comes back and indicates the model has been trained.
 
-#### To run the model (InteractML Wiki Step 6):
+#### To run the model (InteractML Wiki Step 6)
+
 1. Start the game in Unity    
 2. Press "P" to run the model. You can skip that step if you check `Run Model on Play` in the `Machine Learning System` node. 
 
 ### Compatibility
+
 InteractML is in pre-release alpha, under heavy construction and not ready for production at the moment. It is for the curious who want to try out and experiment with interactive machine learning. The developers strongly recommend to use [release 0.20.4](https://github.com/Interactml/iml-unity/releases/tag/0.20.4) with **Unity 2019.2**. For this repo, I have used this setup on a Mac.

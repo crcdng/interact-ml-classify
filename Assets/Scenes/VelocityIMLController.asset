@@ -97,7 +97,7 @@ MonoBehaviour:
   IsInitialized: 1
   GameObjectDataOut: {fileID: 0}
   GameObjMissing: 0
-  state: 0
+  state: 1
   GOHashCode: 13708
   CreatedDuringPlaymode: 0
 --- !u!114 &-6843207276030303277
@@ -228,7 +228,7 @@ MonoBehaviour:
   TrainingKey: 0
   RunningKey: 0
   TrainOnPlaymodeChange: 0
-  RunOnAwake: 0
+  RunOnAwake: 1
   matchLiveDataInputs: 1
   learningChoice: 0
 --- !u!114 &11400000
