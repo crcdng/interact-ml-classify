@@ -98,7 +98,7 @@ MonoBehaviour:
   GameObjectDataOut: {fileID: 0}
   GameObjMissing: 0
   state: 1
-  GOHashCode: 13708
+  GOHashCode: 13712
   CreatedDuringPlaymode: 0
 --- !u!114 &-6843207276030303277
 MonoBehaviour:
@@ -433,7 +433,7 @@ MonoBehaviour:
   DevMode: 0
   IsInitialized: 1
   m_ScriptInternal: {fileID: 0}
-  ScriptHashCode: 13732
+  ScriptHashCode: 13736
   m_PortsPerFieldInfo:
     m_keys:
     - _fieldName: SetLightColor
