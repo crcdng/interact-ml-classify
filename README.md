@@ -29,6 +29,8 @@ InteractML comes with a [Wiki](https://github.com/Interactml/iml-unity/wiki) tha
 
 #### To record training examples (InteractML Wiki Step 5)
 
+Uncheck `Run Model on Play` in the `Machine Learning System` node if it is checked.
+
 <pre>
 For each class to be detected:     
     Set the class label (a number) in the `Live Int Data` node     
@@ -39,6 +41,8 @@ For each class to be detected:
         Press SPACE to stop recording     
     Stop the game in Unity    
 </pre>
+
+The reason that you want to begin the movement before starting the recording is to avoid the model to pick up common features like an idle object at the beginning.
 
 #### To train the model (InteractML Wiki Step 6)
 

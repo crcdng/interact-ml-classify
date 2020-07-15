@@ -97,7 +97,7 @@ MonoBehaviour:
   IsInitialized: 1
   GameObjectDataOut: {fileID: 0}
   GameObjMissing: 0
-  state: 1
+  state: 0
   GOHashCode: 13712
   CreatedDuringPlaymode: 0
 --- !u!114 &-6843207276030303277
@@ -114,7 +114,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   id: 9f04e574-85da-4468-ab6a-b495563216a9
   graph: {fileID: 11400000}
-  position: {x: -40, y: 152}
+  position: {x: -56, y: 152}
   ports:
     keys:
     - m_In
