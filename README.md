@@ -1,12 +1,12 @@
 ### Cubing Fast and Slow: Classification Example for InteractML in Unity
 
-[InteractML](http://interactml.com/) is the latest addition to the family of interactive machine learning toolkits by Dr. Rebecca Fiebrink. Tools like [Wekinator](http://www.wekinator.org/), [Sound Control](http://soundcontrolsoftware.com/) and [mimic](https://mimicproject.com) are being used by artists, educators and researchers to record and process various kinds of realtime data in order to generate sounds, visuals and other stuff. 
+[InteractML](http://interactml.com/) is the latest addition to the family of interactive machine learning toolkits originated by Dr. Rebecca Fiebrink. Tools like [Wekinator](http://www.wekinator.org/), [Sound Control](http://soundcontrolsoftware.com/) and [mimic](https://mimicproject.com) are used by artists, educators and researchers alike to record and process various kinds of realtime data in order to generate sounds, visuals and other stuff. 
 
 To learn more about this approach to machine learning you can visit two online courses, [Machine Learning for Musicians and Artists](https://www.kadenze.com/courses/machine-learning-for-musicians-and-artists/info) and [Apply Creative Machine Learning](https://www.futurelearn.com/courses/apply-creative-machine-learning). Highly recommended.
 
-One of the strengths of Wekinator is that it can be connected to almost everything through a protocol called OSC. For example, 2 years ago I wrote a helper for the [Bitalino revolution Biodata sensor](https://bitalino.com/en/) that connects [Bitalino to Wekinator via a Processing sketch](https://github.com/i3games/p5_bitalino_helper), among others. The system could learn patterns from heart rate or skin conductance measures and Processing or send it to interactive such as Pure Data, Max or TouchDesigner. 
+One of the strengths of Wekinator is that it can be connected to almost everything through [OSC](https://en.wikipedia.org/wiki/Open_Sound_Control) the Swiss Army knife of protocols. Two years ago I wrote a small helper app for the [Bitalino revolution Biodata sensor](https://bitalino.com/en/) that connects Bitalino to Wekinator [via a Processing sketch](https://github.com/i3games/p5_bitalino_helper). The system can be used to learn patterns from heart rate or skin conductance measures or send data to interactive applications such as Pure Data, Max or TouchDesigner. 
 
-Now surely some people would like to make similar things in [Unity](https://unity.com/). Enter [InteractML](https://github.com/Interactml/iml-unity) which is built on a C++ machine learning library called [RapidLib](https://github.com/mzed/ofxRapidLib). InteractML uses the same approach as Wekinator and it works with Unity game objects. 
+Now what about indie game developer favourite [Unity3D](https://unity.com/)? Enter [InteractML](https://github.com/Interactml/iml-unity) which is built on a C++ machine learning library called [RapidLib](https://github.com/mzed/ofxRapidLib). InteractML uses the same approach as Wekinator and it works with Unity game objects. 
 
 ### Classification  
 
@@ -57,4 +57,4 @@ The reason that you want to begin the movement before starting the recording is 
 
 ### Compatibility
 
-InteractML is in pre-release alpha, under heavy construction and not ready for production at the moment. It is for the curious who want to try out and experiment with interactive machine learning. The developers strongly recommend to use [release 0.20.4](https://github.com/Interactml/iml-unity/releases/tag/0.20.4) with **Unity 2019.2**. For this repo, I have used this setup on a Mac with the Github for Unity plugin.
+InteractML is in alpha, still under construction and not yet ready for production at the moment. It is for the curious who want to try out and experiment with interactive machine learning. This repository is based on [InteractML_Core_v0.20.5]() with **Unity 2019.4 LTS** for  Mac with the Github for Unity plugin.
