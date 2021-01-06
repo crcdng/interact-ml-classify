@@ -57,4 +57,4 @@ The reason that you want to begin the movement before starting the recording is 
 
 ### Compatibility
 
-InteractML is in alpha, still under construction and not yet ready for production at the moment. It is for the curious who want to try out and experiment with interactive machine learning. This repository is based on [InteractML_Core_v0.20.5]() with **Unity 2019.4 LTS** for  Mac with the Github for Unity plugin.
+InteractML is still under construction. It is for the curious who want to try out and experiment with interactive machine learning. This repository is based on [InteractML_Core_v0.20.5](https://github.com/Interactml/iml-unity/releases/tag/0.20.5) with **Unity 2020.2** for Mac.
