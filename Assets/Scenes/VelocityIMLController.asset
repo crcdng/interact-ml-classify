@@ -51,14 +51,14 @@ MonoBehaviour:
   VelocityExtracted: {fileID: 0}
   m_VelocityExtracted:
     m_Values:
-    - -22.337927
-    - 121.04693
-    - -50
+    - 0
+    - 0
+    - 0
   m_LastFrameFeatureValue:
-  - -0.44675854
-  - 2.9509385
-  - -1
-  ReceivingData: 1
+  - 0
+  - 0.53
+  - 0
+  ReceivingData: 0
   x_switch: 1
   y_switch: 1
   z_switch: 1
@@ -385,9 +385,9 @@ MonoBehaviour:
   z_switch: 1
   m_PositionExtracted:
     m_Values:
-    - -0.44675854
-    - 2.9509385
-    - -1
+    - 0
+    - 0.53
+    - 0
   ReceivingData: 0
 --- !u!114 &2489453593380145458
 MonoBehaviour:
