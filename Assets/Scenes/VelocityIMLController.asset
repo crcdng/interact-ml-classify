@@ -51,14 +51,14 @@ MonoBehaviour:
   VelocityExtracted: {fileID: 0}
   m_VelocityExtracted:
     m_Values:
-    - 0
-    - 0
-    - 0
+    - -22.337927
+    - 121.04693
+    - -50
   m_LastFrameFeatureValue:
-  - 0
-  - 0.53
-  - 0
-  ReceivingData: 0
+  - -0.44675854
+  - 2.9509385
+  - -1
+  ReceivingData: 1
   x_switch: 1
   y_switch: 1
   z_switch: 1
@@ -97,8 +97,8 @@ MonoBehaviour:
   IsInitialized: 1
   GameObjectDataOut: {fileID: 0}
   GameObjMissing: 0
-  state: 0
-  GOHashCode: 21354
+  state: 1
+  GOHashCode: 15356
   CreatedDuringPlaymode: 0
 --- !u!114 &-6843207276030303277
 MonoBehaviour:
@@ -385,9 +385,9 @@ MonoBehaviour:
   z_switch: 1
   m_PositionExtracted:
     m_Values:
-    - 0
-    - 0.53
-    - 0
+    - -0.44675854
+    - 2.9509385
+    - -1
   ReceivingData: 0
 --- !u!114 &2489453593380145458
 MonoBehaviour:
@@ -433,7 +433,7 @@ MonoBehaviour:
   DevMode: 0
   IsInitialized: 1
   m_ScriptInternal: {fileID: 0}
-  ScriptHashCode: 21378
+  ScriptHashCode: 15380
   m_PortsPerFieldInfo:
     m_keys:
     - _fieldName: SetLightColor
